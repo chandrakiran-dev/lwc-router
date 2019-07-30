@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="userApp">
+    <apiVersion>46.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>App</masterLabel>
+    <description>Add a classic greeting to any page.</description>
+    <targets>
+      <target>lightning__AppPage</target>
+      <target>lightning__HomePage</target>
+    </targets>
+</LightningComponentBundle>

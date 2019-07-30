@@ -1,0 +1,24 @@
+:host{
+    background-color: white;
+}
+.background{
+    background-color: white;
+}
+
+.slds-builder-header {
+    position: relative;
+    display: flex;
+    height: 3.125rem;
+    background: white;
+    color: black;
+    border-bottom: 1px solid #e2dfdf;
+}
+.slds-builder-header__nav-item.slds-builder-header__nav-item{
+    border-left: 1px solid #e2dfdf;
+}
+.slds-builder-header__item.slds-builder-header__item {
+    border-left: 1px solid #e2dfdf;
+}
+.slds-builder-header__item{
+    border-left: none;
+}

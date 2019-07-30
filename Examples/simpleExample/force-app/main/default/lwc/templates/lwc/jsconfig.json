@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "c/userApp": [
+                "../../apps/lwc/userApp/userApp.js"
+            ]
+        }
+    }
+}
