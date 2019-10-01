@@ -39,7 +39,7 @@ This repository is extending the LWC feature for routing within salesforce LWC c
 ```sh
   <c-back variant="link" label="Back"></c-back>
 ```
-- To use the below code for back
+- To use the below code for refresh the current component
 ```sh
   <c-refresh variant="link" label="Refresh"></c-refresh>
 ```
