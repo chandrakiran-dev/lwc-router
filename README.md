@@ -7,6 +7,12 @@ This repository is extending the LWC feature for routing within salesforce LWC c
 - Handled browser next, previous and refresh buttons.
 - Very helpful in big project, salesforce1 and mobile application.
 
+# Installation
+- Download the repository.
+- Extract the zip file.
+- Copy lib folder to salesforce project LWC folder.
+
+
 # Use Case
 In a big project we always try to understand that one component is called from which component. So need some module that manage whole navigation of the project. By seeing that we able to understand when this component called.
 
