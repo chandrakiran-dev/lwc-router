@@ -11,6 +11,26 @@ This repository is extending the LWC feature for routing within salesforce LWC c
 - Download the repository.
 - Extract the zip file.
 - Copy lib folder to salesforce project LWC folder.
+- Installation in done :)
+
+# How to Use
+- In the main component use the below components:
+```sh
+  <c-router root = "/"  onpayloadchange = {handelPayloadChange}>  # c-router must contain two attribute root, onpayloadchange
+      <c-route path="/">                                          # this default route and path should match with root 
+          <c-home payload = {payload}></c-home>                   # onload child component
+      </c-route>
+      <c-route path="/dashboard">                                 # this route for /dashboard
+          <c-dashboard payload = {payload}></c-dashboard>         # This component will show when current route is /dashboard
+      </c-route>
+      <c-route path="/about">                                     # this route for /about
+          <c-about payload = {payload}></c-about>                 # This component will show when current route is /about
+      </c-route>
+      <c-route path="/profile">                                   # this route for /profile
+          <c-profile payload = {payload}></c-profile>             # This component will show when current route is /profile
+      </c-route>
+  </c-router>
+```
 
 
 # Use Case
