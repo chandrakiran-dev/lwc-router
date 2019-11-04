@@ -1,19 +1,19 @@
 # lwc-router
 This repository is extending the LWC feature for routing within salesforce LWC component.
-
+<!-- ... 
 ## Feature
 - A module that handle whole navigation for the project.
 - Refresh the perticuler component.
 - Handled browser next, previous and refresh buttons.
-- Very helpful in big project, salesforce1 and mobile application.
+- Very helpful in big project, salesforce1 and mobile application.-->
 
-## Installation
+<!--## Installation
 - Download the repository.
 - Extract the zip file.
 - Copy lib folder to salesforce project LWC folder.
-- Installation in done :)
+- Installation in done :)-->
 
-## How to Use
+<!--## How to Use
 - In the main component use the below components:
 ```sh
   <c-router root = "/"  onpayloadchange = {handelPayloadChange}>  # c-router must contain two attribute root, onpayloadchange
@@ -43,8 +43,8 @@ This repository is extending the LWC feature for routing within salesforce LWC c
 ```sh
   <c-refresh variant="link" label="Refresh"></c-refresh>
 ```
+-->
+<!--## Use Case
+In a big project we always try to understand that one component is called from which component. So need some module that manage whole navigation of the project. By seeing that we able to understand when this component called.-->
 
-## Use Case
-In a big project we always try to understand that one component is called from which component. So need some module that manage whole navigation of the project. By seeing that we able to understand when this component called.
-
-In Salesforce1 app every functionality have many screens and all screen is a component. So navigation is very complex in that. To manage that we should use routing modules.
+<!--In Salesforce1 app every functionality have many screens and all screen is a component. So navigation is very complex in that. To manage that we should use routing modules.-->
