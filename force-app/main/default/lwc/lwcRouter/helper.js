@@ -31,20 +31,25 @@ export const getRouteMatch = (thisArg, callback) => {
 }
 
 export const matchPath = (path, currentPath, exact, ignoreNotFound) => {
+    let splitPath = path.split('/');
+    let splitCurrentPath = currentPath.split('/');
     if(!currentPath){
         return new URLMatcher(false);
-    }else if(path == '*' && !ignoreNotFound){
+    }
+    if(path === currentPath){
+        return new URLMatcher(true, path);
+    }
+    if(path == '*' && !ignoreNotFound){
         return new URLMatcher(true, currentPath);
-    }else if(path === currentPath){
-        return new URLMatcher(true, path);
-    }else if(currentPath.indexOf(path) == 0 && !exact){
-        return new URLMatcher(true, path);
-    }else if(path.indexOf(':') > 0){
-        let splitPath = path.split('/');
-        let splitCurrentPath = currentPath.split('/');
-        if(splitPath.length != splitCurrentPath.length){
+    }
+    if(exact){
+        if(path.indexOf(':') != -1 && splitPath.length != splitCurrentPath.length){
             return new URLMatcher(false);
         }
+    }
+    if(currentPath.indexOf(path) == 0 && !exact){
+        return new URLMatcher(true, path);
+    }else if(path.indexOf(':') > -1){
         let isMatching = true;
         let params = {};
         let url = path;

@@ -17,13 +17,7 @@ export default class SwitchWrapper {
         }
         this._currentPath = value
         setTimeout(() => {
-            for(let index = 0; index < this._subscribers.length; index++){
-                const isMatching =  this._subscribers[index]._callback()
-                if(isMatching){
-                    this._currentMatcher = this._subscribers[index];
-                    break;
-                }
-            }
+            this.fireEvent()
         })
     }
 
@@ -32,11 +26,17 @@ export default class SwitchWrapper {
             const subscriber = new Subscription(thisArg, callback, this._subscribers);
             const route = subscriber.subscribe();
             this._setOfPath.add(thisArg.path);
-            const isMatching = callback(true);
-            if(isMatching){
-                this._currentMatcher = route;
-            }
+            this.fireEvent()
             return route;
+        }
+    }
+    fireEvent(){
+        for(let index = 0; index < this._subscribers.length; index++){
+            const isMatching =  this._subscribers[index]._callback()
+            if(isMatching){
+                this._currentMatcher = this._subscribers[index];
+                break;
+            }
         }
     }
 }

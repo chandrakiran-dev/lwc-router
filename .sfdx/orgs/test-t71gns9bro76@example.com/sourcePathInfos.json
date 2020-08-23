@@ -224,14 +224,14 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/route/route.js",
         {
-            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/route/route.js",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 2104,
             "modifiedTime": 1598187844942,
             "changeTime": 1598187844942,
-            "contentHash": "40d488c522ca977b9d2492a9b1976cde6cc9baa7"
+            "contentHash": "40d488c522ca977b9d2492a9b1976cde6cc9baa7",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -406,14 +406,14 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/lwcRouter/helper.js",
         {
-            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/lwcRouter/helper.js",
             "isDirectory": false,
+            "size": 2444,
+            "modifiedTime": 1598189709442,
+            "changeTime": 1598189709442,
+            "contentHash": "4970e022d71aad3be7dbac777a189cd8b3ff097f",
             "isMetadataFile": false,
-            "size": 2403,
-            "modifiedTime": 1598187876382,
-            "changeTime": 1598187876382,
-            "contentHash": "3edb47073eec788d8968b8d7968e3ec855c8ceb3"
+            "state": "u"
         }
     ],
     [
@@ -471,14 +471,14 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/lwcRouter/switchWrapper.js",
         {
-            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/lwcRouter/switchWrapper.js",
             "isDirectory": false,
+            "size": 1227,
+            "modifiedTime": 1598190135298,
+            "changeTime": 1598190135298,
+            "contentHash": "1207445819d063ce549aef5226de253aae0ceadb",
             "isMetadataFile": false,
-            "size": 1309,
-            "modifiedTime": 1598187895700,
-            "changeTime": 1598187895700,
-            "contentHash": "00f8cbb61d491c4eee0039efbfae3442fdad3ff1"
+            "state": "u"
         }
     ],
     [
@@ -627,14 +627,14 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/nesting.html",
         {
+            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/nesting.html",
             "isDirectory": false,
-            "size": 1002,
-            "modifiedTime": 1598186992526,
-            "changeTime": 1598186992526,
-            "contentHash": "69e61fb4b34b87dca9f08f0a78095e152a6a9656",
             "isMetadataFile": false,
-            "state": "u"
+            "size": 1002,
+            "modifiedTime": 1598190255087,
+            "changeTime": 1598190255087,
+            "contentHash": "69e61fb4b34b87dca9f08f0a78095e152a6a9656"
         }
     ],
     [
