@@ -1,0 +1,23 @@
+<template>
+    <h2>Topics</h2>
+    <ul>
+        <li>
+            <c-link to=":url/rendering" label="Rendering with LWC"></c-link>
+        </li>
+        <li>
+            <c-link to=":url/components" label="Components"></c-link>
+        </li>
+        <li>
+            <c-link to=":url/props-v-state" label="Props v. State"></c-link>
+        </li>
+    </ul>
+
+    <c-switch>
+        <c-route exact path=":path">
+          <h3>Please select a topic.</h3>
+        </c-route>
+        <c-route path=":path/:topicId">
+          <c-topic></c-topic>
+        </c-route>
+    </c-switch>
+</template>

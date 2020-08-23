@@ -1,0 +1,25 @@
+<template>
+    <c-router>
+        <div class="slds-tabs_default">
+            <ul class="slds-tabs_default__nav" role="tablist">
+              <li class="slds-tabs_default__item" title="Home" role="presentation">
+                <c-link label="Home" to='/'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Topics" role="presentation">
+                <c-link label="Topics" to='/topics'></c-link>
+              </li>
+            </ul>
+            <c-switch>
+                <c-route exact path="/">
+                    <div class="slds-tabs_default__content ">Home</div>
+                </c-route>
+                <c-route path="/topics">
+                    <div class="slds-tabs_default__content "><c-topics></c-topics></div>
+                </c-route>
+                <c-route path="*">
+                    <div class="slds-tabs_default__content ">Url not found</div>
+                </c-route>
+            </c-switch>
+        </div>
+    </c-router>
+</template>

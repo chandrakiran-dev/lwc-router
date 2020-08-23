@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/link": [
+                "link/link.js"
+            ],
+            "c/lwcRouter": [
+                "lwcRouter/lwcRouter.js"
+            ],
+            "c/route": [
+                "route/route.js"
+            ],
+            "c/router": [
+                "router/router.js"
+            ],
+            "c/switch": [
+                "switch/switch.js"
+            ],
+            "c/basic": [
+                "../../../../examples/lwc/basic/basic.js"
+            ],
+            "c/urlParameterChild": [
+                "../../../../examples/lwc/urlParameterChild/urlParameterChild.js"
+            ],
+            "c/nesting": [
+                "../../../../examples/lwc/nesting/nesting.js"
+            ],
+            "c/topics": [
+                "../../../../examples/lwc/topics/topics.js"
+            ],
+            "c/topic": [
+                "../../../../examples/lwc/topic/topic.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

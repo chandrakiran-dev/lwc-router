@@ -1,0 +1,34 @@
+<template>
+    <c-router>
+        <div class="slds-tabs_default">
+            <ul class="slds-tabs_default__nav" role="tablist">
+              <li class="slds-tabs_default__item" title="Item One" role="presentation">
+                <c-link label="Netflix" to='/netflix'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Two" role="presentation">
+                <c-link label="Zillow Group" to='/zillow-group'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Three" role="presentation">
+                <c-link label="Yahoo" to='/yahoo'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Four" role="presentation">
+                <c-link label="Modus Create" to='/modus-create'></c-link>
+              </li> 
+              <li class="slds-tabs_default__item" title="Item One" role="presentation">
+                <c-link label="Netflix two" to='/netflix/amazon'></c-link>
+              </li>
+            </ul>
+            <c-switch>
+                <c-route exact path="/">
+                    <div class="slds-tabs_default__content "><c-url-parameter-child></c-url-parameter-child></div>
+                </c-route>
+                <c-route exact path="/:id">
+                    <div class="slds-tabs_default__content "><c-url-parameter-child></c-url-parameter-child></div>
+                </c-route>
+                <c-route path="/netflix/:id">
+                    <div class="slds-tabs_default__content "><c-url-parameter-child></c-url-parameter-child></div>
+                </c-route>
+            </c-switch>
+        </div>
+    </c-router>
+</template>
