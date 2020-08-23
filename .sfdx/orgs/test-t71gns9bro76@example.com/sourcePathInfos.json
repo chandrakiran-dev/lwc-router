@@ -91,15 +91,15 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc",
         {
+            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc",
             "isDirectory": true,
-            "size": 288,
-            "modifiedTime": 1598175126934,
-            "changeTime": 1598175126934,
-            "contentHash": "6d786cd4e417003f8a2b3b5e697b5200b763c2e9",
             "isMetadataFile": false,
-            "state": "u",
-            "isWorkspace": false
+            "size": 192,
+            "modifiedTime": 1598190560088,
+            "changeTime": 1598190560088,
+            "isWorkspace": false,
+            "contentHash": "e697b89bde71c34e555c237e13154d2e144f7395"
         }
     ],
     [
@@ -484,14 +484,14 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters",
         {
+            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters",
             "isDirectory": true,
-            "size": 160,
-            "modifiedTime": 1598120540833,
-            "changeTime": 1598120589776,
-            "contentHash": "4de55eb621e6c18272ba884f6b4e8416c848ee5a",
             "isMetadataFile": false,
-            "state": "u"
+            "size": 192,
+            "modifiedTime": 1598190491487,
+            "changeTime": 1598190491487,
+            "contentHash": "654ce62e33ce2bc79e564fd97942ecb0c1a70c14"
         }
     ],
     [
@@ -534,58 +534,6 @@
         }
     ],
     [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameterChild",
-        {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameterChild",
-            "isDirectory": true,
-            "size": 160,
-            "modifiedTime": 1598121008946,
-            "changeTime": 1598121008946,
-            "contentHash": "1388f124b4209c2d0b5243219f73ab030b22890e",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameterChild/urlParameterChild.html",
-        {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameterChild/urlParameterChild.html",
-            "isDirectory": false,
-            "size": 35,
-            "modifiedTime": 1598121118506,
-            "changeTime": 1598121118506,
-            "contentHash": "4a993f88ab2696e32d773b15efe64da5ad62eaa6",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameterChild/urlParameterChild.js",
-        {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameterChild/urlParameterChild.js",
-            "isDirectory": false,
-            "size": 291,
-            "modifiedTime": 1598168258061,
-            "changeTime": 1598168258061,
-            "contentHash": "09598391ee27c8b2c90b812daef7b72d404adad8",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameterChild/urlParameterChild.js-meta.xml",
-        {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameterChild/urlParameterChild.js-meta.xml",
-            "isDirectory": false,
-            "size": 208,
-            "modifiedTime": 1598121008946,
-            "changeTime": 1598121018060,
-            "contentHash": "9804da2687b259ef8e0bbe4b6873f768d2062568",
-            "isMetadataFile": true,
-            "state": "u"
-        }
-    ],
-    [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/lwcRouter/urlMatcher.js",
         {
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/lwcRouter/urlMatcher.js",
@@ -601,40 +549,27 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting",
         {
+            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting",
             "isDirectory": true,
-            "size": 160,
-            "modifiedTime": 1598170265420,
-            "changeTime": 1598170265420,
-            "contentHash": "6d7a777d9e85900dc3f33cf99fe43f77863056b9",
             "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topics",
-        {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topics",
-            "isDirectory": true,
-            "size": 160,
-            "modifiedTime": 1598170485403,
-            "changeTime": 1598170485403,
-            "contentHash": "71e5ecd3648acf79971fc2fff29d4c49b1aa1ab9",
-            "isMetadataFile": false,
-            "state": "u"
+            "size": 192,
+            "modifiedTime": 1598190544944,
+            "changeTime": 1598190544944,
+            "contentHash": "6e2a6af4c2c858091e6a4f5e280e49dc558d985e"
         }
     ],
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/nesting.html",
         {
-            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/nesting.html",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 1002,
             "modifiedTime": 1598190255087,
             "changeTime": 1598190255087,
-            "contentHash": "69e61fb4b34b87dca9f08f0a78095e152a6a9656"
+            "contentHash": "69e61fb4b34b87dca9f08f0a78095e152a6a9656",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -664,94 +599,185 @@
         }
     ],
     [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topics/topics.html",
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc",
         {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topics/topics.html",
-            "isDirectory": false,
-            "size": 585,
-            "modifiedTime": 1598176891823,
-            "changeTime": 1598176891823,
-            "contentHash": "a7160afc8645da16e40aae11d69edcce840ccca1",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topics/topics.js",
-        {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topics/topics.js",
-            "isDirectory": false,
-            "size": 170,
-            "modifiedTime": 1598174953826,
-            "changeTime": 1598174953826,
-            "contentHash": "2c3dee7d5b42602ac6c2faa5bb564ab3ae004dea",
-            "isMetadataFile": false,
-            "state": "u"
-        }
-    ],
-    [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topics/topics.js-meta.xml",
-        {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topics/topics.js-meta.xml",
-            "isDirectory": false,
-            "size": 208,
-            "modifiedTime": 1598170485403,
-            "changeTime": 1598170626648,
-            "contentHash": "9804da2687b259ef8e0bbe4b6873f768d2062568",
-            "isMetadataFile": true,
-            "state": "u"
-        }
-    ],
-    [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topic",
-        {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topic",
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc",
             "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 128,
+            "modifiedTime": 1598190501490,
+            "changeTime": 1598190501490,
+            "contentHash": "b7c159cc05c3ae3994666d376f9f527ff5c559c9"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc/urlParameterChild",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc/urlParameterChild",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 160,
+            "modifiedTime": 1598121008946,
+            "changeTime": 1598190501490,
+            "contentHash": "1388f124b4209c2d0b5243219f73ab030b22890e"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 160,
+            "modifiedTime": 1598190560088,
+            "changeTime": 1598190560088,
+            "contentHash": "0ada268f5302187f71dceccf66caceeaab163814"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topic",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topic",
+            "isDirectory": true,
+            "isMetadataFile": false,
             "size": 160,
             "modifiedTime": 1598175126936,
-            "changeTime": 1598175126936,
-            "contentHash": "8e6c31a556fc7bd9b319815b892d6301d875e248",
-            "isMetadataFile": false,
-            "state": "u"
+            "changeTime": 1598190550471,
+            "contentHash": "8e6c31a556fc7bd9b319815b892d6301d875e248"
         }
     ],
     [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topic/topic.html",
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topics",
         {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topic/topic.html",
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topics",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 160,
+            "modifiedTime": 1598170485403,
+            "changeTime": 1598190560088,
+            "contentHash": "71e5ecd3648acf79971fc2fff29d4c49b1aa1ab9"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc/urlParameterChild/urlParameterChild.html",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc/urlParameterChild/urlParameterChild.html",
             "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 35,
+            "modifiedTime": 1598121118506,
+            "changeTime": 1598121118506,
+            "contentHash": "4a993f88ab2696e32d773b15efe64da5ad62eaa6"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc/urlParameterChild/urlParameterChild.js",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc/urlParameterChild/urlParameterChild.js",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 291,
+            "modifiedTime": 1598168258061,
+            "changeTime": 1598168258061,
+            "contentHash": "09598391ee27c8b2c90b812daef7b72d404adad8"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc/urlParameterChild/urlParameterChild.js-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/urlParameters/lwc/urlParameterChild/urlParameterChild.js-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 208,
+            "modifiedTime": 1598121008946,
+            "changeTime": 1598121018060,
+            "contentHash": "9804da2687b259ef8e0bbe4b6873f768d2062568"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topic/topic.html",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topic/topic.html",
+            "isDirectory": false,
+            "isMetadataFile": false,
             "size": 50,
             "modifiedTime": 1598175706073,
             "changeTime": 1598175706073,
-            "contentHash": "75b0b92e54e00e00310056e7f41c2a9e91de88c1",
-            "isMetadataFile": false,
-            "state": "u"
+            "contentHash": "75b0b92e54e00e00310056e7f41c2a9e91de88c1"
         }
     ],
     [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topic/topic.js",
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topic/topic.js",
         {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topic/topic.js",
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topic/topic.js",
             "isDirectory": false,
+            "isMetadataFile": false,
             "size": 326,
             "modifiedTime": 1598175782039,
             "changeTime": 1598175782039,
-            "contentHash": "d83e7cc9582af9fcd139f2cd31879875fb47c333",
-            "isMetadataFile": false,
-            "state": "u"
+            "contentHash": "d83e7cc9582af9fcd139f2cd31879875fb47c333"
         }
     ],
     [
-        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topic/topic.js-meta.xml",
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topic/topic.js-meta.xml",
         {
-            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/topic/topic.js-meta.xml",
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topic/topic.js-meta.xml",
             "isDirectory": false,
+            "isMetadataFile": true,
             "size": 208,
             "modifiedTime": 1598175126936,
             "changeTime": 1598175128493,
-            "contentHash": "9804da2687b259ef8e0bbe4b6873f768d2062568",
+            "contentHash": "9804da2687b259ef8e0bbe4b6873f768d2062568"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topics/topics.html",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topics/topics.html",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 585,
+            "modifiedTime": 1598176891823,
+            "changeTime": 1598176891823,
+            "contentHash": "a7160afc8645da16e40aae11d69edcce840ccca1"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topics/topics.js",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topics/topics.js",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 170,
+            "modifiedTime": 1598174953826,
+            "changeTime": 1598174953826,
+            "contentHash": "2c3dee7d5b42602ac6c2faa5bb564ab3ae004dea"
+        }
+    ],
+    [
+        "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topics/topics.js-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/lwc/topics/topics.js-meta.xml",
+            "isDirectory": false,
             "isMetadataFile": true,
-            "state": "u"
+            "size": 208,
+            "modifiedTime": 1598170485403,
+            "changeTime": 1598170626648,
+            "contentHash": "9804da2687b259ef8e0bbe4b6873f768d2062568"
         }
     ]
 ]

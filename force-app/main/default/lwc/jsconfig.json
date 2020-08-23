@@ -21,17 +21,17 @@
             "c/basic": [
                 "../../../../examples/lwc/basic/basic.js"
             ],
-            "c/urlParameterChild": [
-                "../../../../examples/lwc/urlParameterChild/urlParameterChild.js"
-            ],
             "c/nesting": [
                 "../../../../examples/lwc/nesting/nesting.js"
             ],
-            "c/topics": [
-                "../../../../examples/lwc/topics/topics.js"
+            "c/urlParameters": [
+                "../../../../examples/lwc/urlParameters/urlParameters.js"
+            ],
+            "c/urlParameterChild": [
+                "../../../../examples/lwc/urlParameters/lwc/urlParameterChild/urlParameterChild.js"
             ],
             "c/topic": [
-                "../../../../examples/lwc/topic/topic.js"
+                "../../../../examples/lwc/nesting/lwc/topic/topic.js"
             ]
         }
     },

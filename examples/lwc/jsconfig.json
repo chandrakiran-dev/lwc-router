@@ -21,17 +21,17 @@
             "c/basic": [
                 "basic/basic.js"
             ],
-            "c/urlParameterChild": [
-                "urlParameterChild/urlParameterChild.js"
-            ],
             "c/nesting": [
                 "nesting/nesting.js"
             ],
-            "c/topics": [
-                "topics/topics.js"
+            "c/urlParameters": [
+                "urlParameters/urlParameters.js"
+            ],
+            "c/urlParameterChild": [
+                "urlParameters/lwc/urlParameterChild/urlParameterChild.js"
             ],
             "c/topic": [
-                "topic/topic.js"
+                "nesting/lwc/topic/topic.js"
             ]
         }
     },

@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "c/link": [
+                "../../../../force-app/main/default/lwc/link/link.js"
+            ],
+            "c/lwcRouter": [
+                "../../../../force-app/main/default/lwc/lwcRouter/lwcRouter.js"
+            ],
+            "c/route": [
+                "../../../../force-app/main/default/lwc/route/route.js"
+            ],
+            "c/router": [
+                "../../../../force-app/main/default/lwc/router/router.js"
+            ],
+            "c/switch": [
+                "../../../../force-app/main/default/lwc/switch/switch.js"
+            ],
+            "c/basic": [
+                "../../basic/basic.js"
+            ],
+            "c/nesting": [
+                "../../nesting/nesting.js"
+            ],
+            "c/urlParameters": [
+                "../urlParameters.js"
+            ],
+            "c/urlParameterChild": [
+                "urlParameterChild/urlParameterChild.js"
+            ],
+            "c/topic": [
+                "../../nesting/lwc/topic/topic.js"
+            ]
+        }
+    }
+}

@@ -1,8 +1,8 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 import {getParam} from 'c/lwcRouter';
 
 export default class UrlParameterChild extends LightningElement {
-    @track id;
+    id;
 
     async connectedCallback(){
         await getParam(this, (param) => {

@@ -471,14 +471,14 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/lwcRouter/switchWrapper.js",
         {
-            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/force-app/main/default/lwc/lwcRouter/switchWrapper.js",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 1227,
             "modifiedTime": 1598190135298,
             "changeTime": 1598190135298,
-            "contentHash": "1207445819d063ce549aef5226de253aae0ceadb"
+            "contentHash": "1207445819d063ce549aef5226de253aae0ceadb",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -627,14 +627,14 @@
     [
         "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/nesting.html",
         {
+            "state": "u",
             "sourcePath": "/Users/chandra/Documents/Project/SFDC/LWC/lwcRouter/lwc-router/examples/lwc/nesting/nesting.html",
             "isDirectory": false,
-            "size": 1008,
-            "modifiedTime": 1598189834846,
-            "changeTime": 1598189834846,
-            "contentHash": "3d9a95db87b8cd43ad4f890e0e2872d9c5a151eb",
             "isMetadataFile": false,
-            "state": "u"
+            "size": 1002,
+            "modifiedTime": 1598190255087,
+            "changeTime": 1598190255087,
+            "contentHash": "69e61fb4b34b87dca9f08f0a78095e152a6a9656"
         }
     ],
     [
