@@ -1,4 +1,4 @@
-- Getting started
+- Examples
 
-  - [Quick start](quickstart.md)
-  - [Basic Tutorial](basictutorial.md)
+  - [Basic](quickstart.md)
+  - [URL parameters](basictutorial.md)
