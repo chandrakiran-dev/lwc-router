@@ -1,114 +1,68 @@
 # Quick start
 
-It is recommended to install `docsify-cli` globally, which helps initializing and previewing the website locally.
+LWC-router is the **client-side routing** for the LWC. It allows us to build a single page web application with navigation without the page refreshing as the user navigates. LWC-router uses component structure to call component, which display appropriate information. All the routing are placed on one place so it's very easy to understand the component navigation. 
 
+In the salesforce, many times there is a requirement to create single page application over their, we face following problem:
+
+* Navigate from one component to other component.
+* Handle browser navigation like back button.
+* Handle browser refresh button.
+* It's very hard to understands form where the navigation happen. Especially, for the newbies.
+
+LWC-router providing solution for these type of issues and many more.
+
+## Installation
+
+To install the LWC-router, we only need to click on the below button. It will redirect you to another page where you need to login to salesforce, it will automatically install in your org. It's nothing but just unlock package url.
+
+<button type="button" class="btn btn-outline-primary"><i class="fab fa-salesforce"></i> Deploy to Developer Org</button>
+<button type="button" class="btn btn-outline-primary"><i class="fab fa-salesforce"></i> Deploy to Sandbox Org</button>
+
+Or, run below command to install the package
 ```bash
-npm i docsify-cli -g
+sfdx force:package:install --package 04t2v00000799S7AAI
 ```
 
-## Initialize
+## Basic Routing - Example
 
-If you want to write the documentation in the `./docs` subdirectory, you can use the `init` command.
-
-```bash
-docsify init ./docs
-```
-
-## Writing content
-
-After the `init` is complete, you can see the file list in the `./docs` subdirectory.
-
-* `index.html` as the entry file
-* `README.md` as the home page
-* `.nojekyll` prevents GitHub Pages from ignoring files that begin with an underscore
-
-You can easily update the documentation in `./docs/README.md`, of course you can add [more pages](more-pages.md).
-
-## Preview your site
-
-Run the local server with `docsify serve`. You can preview your site in your browser on `http://localhost:3000`.
-
-```bash
-docsify serve docs
-```
-
-?> For more use cases of `docsify-cli`, head over to the [docsify-cli documentation](https://github.com/docsifyjs/docsify-cli).
-
-## Manual initialization
-
-If you don't like `npm` or have trouble installing the tool, you can manually create `index.html`:
+In this example we have 3 “pages” handled by the router: a home page, an about page, and a users page. As you click around on the different `<c-link>`s, the `<c-router>` renders the matching `<c-route>`.
 
 ```html
-<!-- index.html -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      //...
-    }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-</body>
-</html>
+<!--basic.html-->
+<template>
+    <c-router>
+        <div class="slds-tabs_default">
+            <ul class="slds-tabs_default__nav" role="tablist">
+              <li class="slds-tabs_default__item" title="Item One" role="presentation">
+                <c-link label="item one" to='/'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Two" role="presentation">
+                <c-link label="item two" to='/item-two'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Three" role="presentation">
+                <c-link label="item Three" to='/item-three'></c-link>
+              </li>
+            </ul>
+            <c-switch>
+                <c-route exact path="/">
+                    <div class="slds-tabs_default__content ">Item One Content</div>
+                </c-route>
+                <c-route path="/item-two">
+                    <div class="slds-tabs_default__content ">Item Two Content</div>
+                </c-route>
+                <c-route path="/item-three">
+                    <div class="slds-tabs_default__content ">Item Three Content</div>
+                </c-route>
+            </c-switch>
+        </div>
+    </c-router>
+</template>
 ```
 
-### Specifying docsify versions
 
-?> Note that in both of the examples below, docsify URLs will need to be manually updated when a new major version of docsify is released (e.g. `v4.x.x` => `v5.x.x`). Check the docsify website periodically to see if a new major version has been released.
+## Link and Reference
 
-Specifying a major version in the URL (`@4`) will allow your site will receive non-breaking enhancements (i.e. "minor" updates) and bug fixes (i.e. "patch" updates) automatically. This is the recommended way to load docsify resources.
 
-```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
-<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-```
+## Keep Going!
 
-If you prefer to lock docsify to a specific version, specify the full version after the `@` symbol in the URL. This is the safest way to ensure your site will look and behave the same way regardless of any changes made to future versions of docsify.
-
-```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4.11.4/themes/vue.css">
-<script src="//cdn.jsdelivr.net/npm/docsify@4.11.4"></script>
-```
-
-### Manually preview your site
-
-If you installed python on your system, you can easily use it to run a static server to preview your site.
-
-```bash
-cd docs && python -m SimpleHTTPServer 3000
-```
-
-## Loading dialog
-
-If you want, you can show a loading dialog before docsify starts to render your documentation:
-
-```html
-<!-- index.html -->
-
-<div id="app">Please wait...</div>
-```
-
-You should set the `data-app` attribute if you changed `el`:
-
-```html
-<!-- index.html -->
-
-<div data-app id="main">Please wait...</div>
-
-  <script>
-    window.$docsify = {
-      el: '#main'
-    }
-  </script>
-```
-
-Compare [el configuration](configuration.md#el).
+Hopefully these examples give you a feel for what it’s like to create a single page application with LWC-Router. Keep reading to learn more about the [primary components](primarycomponents.md) in LWC Router!

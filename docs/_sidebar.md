@@ -1,4 +1,4 @@
-- Examples
+- Guide
 
-  - [Basic](quickstart.md)
-  - [URL parameters](basictutorial.md)
+  - [Quick Start](quickstart.md)
+  - [Primary Components](primarycomponents.md)
