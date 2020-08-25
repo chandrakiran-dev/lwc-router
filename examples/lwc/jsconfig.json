@@ -26,12 +26,6 @@
             ],
             "c/urlParameters": [
                 "urlParameters/urlParameters.js"
-            ],
-            "c/urlParameterChild": [
-                "urlParameters/lwc/urlParameterChild/urlParameterChild.js"
-            ],
-            "c/topic": [
-                "nesting/lwc/topic/topic.js"
             ]
         }
     },

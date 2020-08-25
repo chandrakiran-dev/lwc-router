@@ -59,9 +59,34 @@ In this example we have 3 “pages” handled by the router: a home page, an abo
 </template>
 ```
 
+To use this, After the LWC- router installation, simple create the new Lightning Web Component and update the JS file with above code.
+Also, update the meta file to expose this to various page like Home page, App page. Use below code to expose.
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>basic</masterLabel>
+    <description>Add a classic greeting to any page.</description>
+    <targets>
+      <target>lightning__AppPage</target>
+      <target>lightning__HomePage</target>
+    </targets>
+</LightningComponentBundle>
+```
+
+Open salesforce org, goto home page and Edit the page by clicking the gear icon and edit page. Then, simply drag and drop the component on the page and Save & activate.
+
+It good to go. You have implemented the first application with LWC-router. Cheers!
+
 
 ## Link and Reference
 
+Refer below links to getting started with Lightning Web Components and the know more from react.
+
+* [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/en/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components&trailmix_creator_id=tzarrjr&trailmix_slug=getting-ready-for-lb-2-b-new-to-lwc).
+* [React Router for reference](https://reactrouter.com/)
 
 ## Keep Going!
 
