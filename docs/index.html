@@ -63,6 +63,20 @@
       background: linear-gradient(to left bottom, hsl(224deg 38% 96%) 0%,hsl(230deg 92% 79%) 100%) !important;
       color: black;
     }
+    a.nav-link.scrollto {
+      color: #34495e !important;
+      padding-left: 0;
+      font-weight: 400;
+    }
+    .close {
+      float: none !important;
+      font-size: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      color: inherit !important;
+      text-shadow: inherit !important;
+      opacity: 1 !important;
+    }
 
   </style>
 </head>
@@ -113,11 +127,40 @@
       plugins: [
         function(hook) {
           var footer = [
+            '<div>'+
+            '<hr/>',
+            '<footer class="footer-container">',
+            '  <div class="container">',
+            '      <div class="row">',
+            '          <div class="col-4" style="padding: 0;">',
+            '              <ul class="section-items list-unstyled nav flex-column pb-3" style="padding-left: 0;">',
+            '                  <li class="nav-item"><a class="nav-link scrollto" href="#/quickstart">Quick Start</a></li>',
+            '                  <li class="nav-item"><a class="nav-link scrollto" href="#/quickstart?id=installation">Installation</a></li>',
+            '                  <li class="nav-item"><a class="nav-link scrollto" >API Reference</a></li>',
+            '                  <li class="nav-item"><a class="nav-link scrollto" >Examples</a></li>',
+            '              </ul>',
+            '          </div>',
+            '          <div class="col-4" style="padding: 0;">',
+            '              <ul class="section-items list-unstyled nav flex-column pb-3" style="padding-left: 0;">',
+            '                  <li class="nav-item"><a class="nav-link scrollto" >Privacy Policy</a></li>',
+            '                  <li class="nav-item"><a class="nav-link scrollto" href="https://github.com/chandrakiran-dev/lwc-router/issues" target="_blank">Register an Issue</a></li>',
+            '              </ul>',
+            '          </div>',
+            '          <div class="col-4" style="padding: 0;">',
+            '              <ul class="section-items list-unstyled nav flex-column pb-3" style="padding-left: 0;">',
+            '                  <li class="nav-item"><a class="nav-link scrollto" href="/basic-tutorial">Basic Tutorial</a></li>',
+            '                  <li><a href="https://github.com/chandrakiran-dev/lwc-router" target="_blank"><i style="font-size:2rem;color: #34495e;padding-left: 2rem;" class="fab fa-github"></i></a></li>',
+            '              </ul>',
+            '          </div>',
+            '      </div>',
+            '  </div>',
+            '</footer>',
             '<hr/>',
             '<footer>',
-            '<span><a href="https://chandrakiran-dev.github.io/lwc-router">LWC-route</a> &copy;2020.</span>',
-            '<span>Proudly published with <a href="https://github.com/" target="_blank">Github</a> and <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
-            '</footer>'
+            '     <span><a href="https://chandrakiran-dev.github.io/lwc-router">LWC-router</a> &copy;2020.</span>',
+            '     <span>Proudly published with <a href="https://github.com/" target="_blank">Github</a> and <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
+            '</footer>',
+            '</div>'
           ].join('');
 
           hook.afterEach(function(html) {
