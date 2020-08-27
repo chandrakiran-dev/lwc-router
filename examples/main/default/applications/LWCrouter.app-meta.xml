@@ -11,9 +11,11 @@
     <label>LWC-router</label>
     <navType>Standard</navType>
     <tabs>Basic</tabs>
+    <tabs>Query_Param</tabs>
     <tabs>URL_Parameters</tabs>
     <tabs>Nesting</tabs>
-    <tabs>standard-Account</tabs>
+    <tabs>Custom_Link</tabs>
+    <tabs>NavLink_Example</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LWC_router_UtilityBar</utilityBar>
 </CustomApplication>
