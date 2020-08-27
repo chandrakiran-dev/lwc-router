@@ -1,5 +1,5 @@
 import { LightningElement, api, track } from 'lwc';
-import {SwitchWrapper, registerListener, dispatchEvent, REGISTER_SWITCH_EVENT_NAME, REGISTER_ROUTER_EVENT_NAME} from 'c/lwcRouter';
+import {SwitchWrapper, registerListener, dispatchEvent, REGISTER_SWITCH_EVENT_NAME, REGISTER_ROUTER_EVENT_NAME} from 'c/lwcRouterUtil';
 
 export default class Switch extends LightningElement {
     @track switchInstance;

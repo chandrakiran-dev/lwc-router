@@ -1,5 +1,5 @@
 import { LightningElement, track } from 'lwc';
-import {RouterWrapper, registerListener, REGISTER_ROUTER_EVENT_NAME} from 'c/lwcRouter';
+import {RouterWrapper, registerListener, REGISTER_ROUTER_EVENT_NAME} from 'c/lwcRouterUtil';
 
 export default class Router extends LightningElement {
     @track defaultRoute = '/'

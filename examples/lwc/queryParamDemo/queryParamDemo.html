@@ -1,0 +1,28 @@
+<template>
+    <c-router>
+        <div class="slds-tabs_default">
+            <ul class="slds-tabs_default__nav" role="tablist">
+              <li class="slds-tabs_default__item" title="Item One" role="presentation">
+                <c-link label="Netflix" to='/account?name=netflix&price=10'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Two" role="presentation">
+                <c-link label="Zillow Group" to='/account?name=zillow-group&price=20'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Three" role="presentation">
+                <c-link label="Yahoo" to='/account?name=yahoo&price=30'></c-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Four" role="presentation">
+                <c-link label="Modus Create" to='/account?name=modus-create&price=40'></c-link>
+              </li> 
+            </ul>
+            <c-switch>
+                <c-route exact path="/">
+                    <div class="slds-tabs_default__content "><c-redirect to='/account?name=from-redirect'></c-redirect></div>
+                </c-route>
+                <c-route exact path="/account">
+                    <div class="slds-tabs_default__content "><c-query-param-child></c-query-param-child></div>
+                </c-route>
+            </c-switch>
+        </div>
+    </c-router>
+</template>

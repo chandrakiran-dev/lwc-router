@@ -7,6 +7,5 @@ export default class Topic extends LightningElement {
         await getParam(this, (param) => {
             this.topicId = param.topicId;
         })
-        console.log(this.topicId)
     }
 }

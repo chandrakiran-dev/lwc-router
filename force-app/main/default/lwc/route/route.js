@@ -1,5 +1,5 @@
 import { LightningElement, api, track } from 'lwc';
-import {dispatchEvent, matchPath, registerListener,getRouteMatch, REGISTER_SWITCH_EVENT_NAME, REGISTER_GET_PARAM_EVENT_NAME, REGISTER_GET_ROUTE_MATCH_EVENT_NAME} from 'c/lwcRouter';
+import {dispatchEvent, matchPath, registerListener,getRouteMatch,REGISTER_GET_QUERY_EVENT_NAME, REGISTER_SWITCH_EVENT_NAME, REGISTER_GET_PARAM_EVENT_NAME, REGISTER_GET_ROUTE_MATCH_EVENT_NAME} from 'c/lwcRouterUtil';
 export default class Route extends LightningElement {
     @api path;
     @api exact = false;
@@ -18,6 +18,7 @@ export default class Route extends LightningElement {
             }
         })
         registerListener(REGISTER_GET_PARAM_EVENT_NAME, this, this.getParam.bind(this));
+        registerListener(REGISTER_GET_QUERY_EVENT_NAME, this, this.getQuery.bind(this));
         registerListener(REGISTER_GET_ROUTE_MATCH_EVENT_NAME, this, this.getRouteMatch.bind(this));
         await dispatchEvent(REGISTER_SWITCH_EVENT_NAME, this, (switchInstance) => {
             this.switchInstance = switchInstance;
@@ -29,6 +30,15 @@ export default class Route extends LightningElement {
         let callback = event.detail;
         if(this.matcher){
             callback(this.matcher.urlParam);
+        }else{
+            callback({});
+        }
+        event.stopPropagation();
+    }
+    getQuery(event){
+        let callback = event.detail;
+        if(this.matcher){
+            callback(this.matcher.queryParam);
         }else{
             callback({});
         }
@@ -52,8 +62,5 @@ export default class Route extends LightningElement {
     }
     get renderChild(){
         return this.isPathMatching;
-    }
-    renderedCallback(){
-        console.log(JSON.stringify(this.matcher))
     }
 }

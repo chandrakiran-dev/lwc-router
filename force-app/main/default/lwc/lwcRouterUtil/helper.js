@@ -1,4 +1,4 @@
-import {REGISTER_GET_PARAM_EVENT_NAME, REGISTER_GET_ROUTE_MATCH_EVENT_NAME} from './constants';
+import {REGISTER_GET_PARAM_EVENT_NAME, REGISTER_GET_ROUTE_MATCH_EVENT_NAME, REGISTER_GET_QUERY_EVENT_NAME} from './constants';
 import URLMatcher from './urlMatcher';
 
 export const registerListener = (name, thisArg, callback) => {
@@ -21,6 +21,14 @@ export const getParam = (thisArg, callback) => {
         thisArg.dispatchEvent(customEvt);
     }
 }
+export const getQuery = (thisArg, callback) => {
+    const customEvt = new CustomEvent(REGISTER_GET_QUERY_EVENT_NAME, { bubbles: true, composed: true, detail : (data)=>{
+        callback(data);
+    }})
+    if(customEvt){
+        thisArg.dispatchEvent(customEvt);
+    }
+}
 export const getRouteMatch = (thisArg, callback) => {
     const customEvt = new CustomEvent(REGISTER_GET_ROUTE_MATCH_EVENT_NAME, { bubbles: true, composed: true, detail : (data)=>{
         callback(data);
@@ -30,17 +38,23 @@ export const getRouteMatch = (thisArg, callback) => {
     }
 }
 
-export const matchPath = (path, currentPath, exact, ignoreNotFound) => {
+export const matchPath = (path, uri, exact, ignoreNotFound) => {
+    let splittedUri = uri.split('?');
+    let currentPath = splittedUri[0];
+    let queryParam = {}
+    if(splittedUri.length > 1){
+        queryParam = getParams(splittedUri[1])
+    }
     let splitPath = path.split('/');
     let splitCurrentPath = currentPath.split('/');
     if(!currentPath){
         return new URLMatcher(false);
     }
     if(path === currentPath){
-        return new URLMatcher(true, path);
+        return new URLMatcher(true, path, {}, queryParam);
     }
     if(path == '*' && !ignoreNotFound){
-        return new URLMatcher(true, currentPath);
+        return new URLMatcher(true, currentPath, {}, queryParam);
     }
     if(exact){
         if(path.indexOf(':') != -1 && splitPath.length != splitCurrentPath.length){
@@ -48,7 +62,7 @@ export const matchPath = (path, currentPath, exact, ignoreNotFound) => {
         }
     }
     if(currentPath.indexOf(path) == 0 && !exact){
-        return new URLMatcher(true, path);
+        return new URLMatcher(true, path, {}, queryParam);
     }else if(path.indexOf(':') > -1){
         let isMatching = true;
         let params = {};
@@ -65,8 +79,18 @@ export const matchPath = (path, currentPath, exact, ignoreNotFound) => {
                 return;
             }
         })
-        return new URLMatcher(isMatching, url, params);
+        return new URLMatcher(isMatching, url, params, queryParam);
     }else{
         return new URLMatcher(false);
     }
 }
+
+const getParams = function (url) {
+	var params = {};
+	var vars = url.split('&');
+	for (var i = 0; i < vars.length; i++) {
+		var pair = vars[i].split('=');
+		params[pair[0]] = decodeURIComponent(pair[1]);
+	}
+	return params;
+};
