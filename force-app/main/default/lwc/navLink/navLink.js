@@ -24,9 +24,6 @@ export default class NavLink extends Link {
         }
     }
     get activeClass(){
-        if(this.styleResource){
-            console.log('Add style-resource to get the proper results.')
-        }
         let strClass = 'slds-button ' + this.variantClass[this.variant.toLowerCase()] + ' ';
         if(this.currentPath == this.to){
             strClass += this.activeClassName;

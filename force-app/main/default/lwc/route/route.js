@@ -5,7 +5,7 @@ export default class Route extends LightningElement {
     @api exact = false;
     @track currentPath;
     @track switchInstance;
-    @track isPathMatching;
+    @track isPathMatching = false;
     @track matcher;
     unsubscribe;
     parentPath;
