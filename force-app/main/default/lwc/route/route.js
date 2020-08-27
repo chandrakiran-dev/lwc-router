@@ -54,11 +54,18 @@ export default class Route extends LightningElement {
             this.unsubscribe.unsubscribe();
         }
     }
-    handleChange(ignoreNotFound){
-        this.currentPath = this.switchInstance.currentPath;
-        this.matcher = matchPath(this.path, this.currentPath, this.exact, ignoreNotFound);
-        this.isPathMatching = this.matcher.isMatching;
-        return this.isPathMatching;
+    handleChange(matcher){
+        if(!matcher){
+            this.isPathMatching = false;
+        }else{
+            this.matcher = matcher;
+            this.isPathMatching = matcher.isMatching;
+        }
+            
+        //this.currentPath = this.switchInstance.currentPath;
+        //this.matcher = matchPath(this.path, this.currentPath, this.exact);
+        //this.isPathMatching = this.matcher.isMatching;
+        //return this.matcher.isMatching;
     }
     get renderChild(){
         return this.isPathMatching;

@@ -38,7 +38,7 @@ export const getRouteMatch = (thisArg, callback) => {
     }
 }
 
-export const matchPath = (path, uri, exact, ignoreNotFound) => {
+export const matchPath = (path, uri, exact) => {
     let splittedUri = uri.split('?');
     let currentPath = splittedUri[0];
     let queryParam = {}
@@ -53,7 +53,7 @@ export const matchPath = (path, uri, exact, ignoreNotFound) => {
     if(path === currentPath){
         return new URLMatcher(true, path, {}, queryParam);
     }
-    if(path == '*' && !ignoreNotFound){
+    if(path == '*'){
         return new URLMatcher(true, currentPath, {}, queryParam);
     }
     if(exact){

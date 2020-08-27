@@ -1,4 +1,5 @@
 import Subscription from './subscription';
+import {matchPath} from './helper';
 
 export default class SwitchWrapper {
     constructor(currentPath){
@@ -12,13 +13,12 @@ export default class SwitchWrapper {
     }
     set currentPath(value){
         if(this._currentMatcher){
-            this._currentPath = '';
-            this._currentMatcher._callback()
+            this._currentMatcher._callback(false);
         }
-        this._currentPath = value
-        setTimeout(() => {
-            this.fireEvent()
-        })
+        this._currentPath = value;
+        
+        this.fireEvent()
+        
     }
 
     subscribe(thisArg, callback){
@@ -26,15 +26,24 @@ export default class SwitchWrapper {
             const subscriber = new Subscription(thisArg, callback, this._subscribers);
             const route = subscriber.subscribe();
             this._setOfPath.add(thisArg.path);
-            this.fireEvent()
+            this.fireEvent();
             return route;
         }
     }
     fireEvent(){
         for(let index = 0; index < this._subscribers.length; index++){
-            const isMatching =  this._subscribers[index]._callback()
-            if(isMatching){
-                this._currentMatcher = this._subscribers[index];
+            const subscribers = this._subscribers[index];
+            const matcher = matchPath(subscribers._thisArg.path, this._currentPath, subscribers._thisArg.exact )
+            //const isMatching =  subscribers._callback()
+            if(matcher.isMatching){
+                if(this._currentMatcher == subscribers){
+                    setTimeout(()=>{
+                        subscribers._callback(matcher)
+                    })
+                }else{
+                    subscribers._callback(matcher)
+                }
+                this._currentMatcher = subscribers;
                 break;
             }
         }
