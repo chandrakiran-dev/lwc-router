@@ -1,0 +1,28 @@
+<template>
+    <c-router>
+        <div class="slds-tabs_default">
+            <ul class="slds-tabs_default__nav" role="tablist">
+              <li class="slds-tabs_default__item" title="Item One" role="presentation">
+                <c-nav-link label="item one" to='/' style-resource={stylePath} active-class-name="active-class"></c-nav-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Two" role="presentation">
+                <c-nav-link label="item two" to='/item-two' style-resource={stylePath} active-class-name="active-class"></c-nav-link>
+              </li>
+              <li class="slds-tabs_default__item" title="Item Three" role="presentation">
+                <c-nav-link label="item Three" to='/item-three' style-resource={stylePath} active-class-name="active-class"></c-nav-link>
+              </li>
+            </ul>
+            <c-switch>
+                <c-route exact path="/">
+                    <div class="slds-tabs_default__content ">Item One Content</div>
+                </c-route>
+                <c-route path="/item-two">
+                    <div class="slds-tabs_default__content ">Item Two Content</div>
+                </c-route>
+                <c-route path="/item-three">
+                    <div class="slds-tabs_default__content ">Item Three Content</div>
+                </c-route>
+            </c-switch>
+        </div>
+    </c-router>
+</template>

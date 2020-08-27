@@ -4,6 +4,7 @@ import {SwitchWrapper, registerListener, dispatchEvent, REGISTER_SWITCH_EVENT_NA
 export default class Switch extends LightningElement {
     @track switchInstance;
     @track routerInstance;
+    @track unsubscribe;
     async connectedCallback(){
         registerListener(REGISTER_SWITCH_EVENT_NAME, this, this.getSwitch);
         
