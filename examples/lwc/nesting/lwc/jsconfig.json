@@ -28,5 +28,14 @@
                 "../../urlParameters/urlParameters.js"
             ]
         }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
     }
 }
