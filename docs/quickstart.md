@@ -90,4 +90,4 @@ Refer below links to getting started with Lightning Web Components and the know 
 
 ## Keep Going!
 
-Hopefully these examples give you a feel for what it’s like to create a single page application with LWC-Router. Keep reading to learn more about the [primary components](primarycomponents.md) in LWC Router!
+Hopefully these examples give you a feel for what it’s like to create a single page application with LWC-Router. Keep reading to learn more about the [primary components](primarycomponents.md) in LWC Router! 
