@@ -59,7 +59,7 @@ In this example we have 3 “pages” handled by the router: a home page, an abo
 </template>
 ```
 
-To use this, After the LWC- router installation, simple create the new Lightning Web Component and update the JS file with above code.
+To use this, After the LWC- router installation, simple create the new Lightning Web Component and update the HTML file with above code.
 Also, update the meta file to expose this to various page like Home page, App page. Use below code to expose.
 
 ```html

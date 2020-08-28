@@ -32,18 +32,17 @@ export default class SwitchWrapper {
     }
     fireEvent(){
         for(let index = 0; index < this._subscribers.length; index++){
-            const subscribers = this._subscribers[index];
-            const matcher = matchPath(subscribers._thisArg.path, this._currentPath, subscribers._thisArg.exact )
-            //const isMatching =  subscribers._callback()
+            const subscriber = this._subscribers[index];
+            const matcher = matchPath(subscriber._thisArg.path, this._currentPath, subscriber._thisArg.exact )
             if(matcher.isMatching){
-                if(this._currentMatcher == subscribers){
+                if(this._currentMatcher == subscriber){
                     setTimeout(()=>{
-                        subscribers._callback(matcher)
+                        subscriber._callback(matcher)
                     })
                 }else{
-                    subscribers._callback(matcher)
+                    subscriber._callback(matcher)
                 }
-                this._currentMatcher = subscribers;
+                this._currentMatcher = subscriber;
                 break;
             }
         }
