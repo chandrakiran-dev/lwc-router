@@ -1,6 +1,6 @@
 # Why to use LWC-router
 
-LWC-router is a tool that allows you to handle routes in a web app, using dynamic routing. Dynamic routing takes place as the app is rendering on your machine, unlike the old routing architecture where the routing is handled in a configuration outside of a running app. React router implements a component-based approach to routing. It provides different routing components according to the needs of the application and platform.
+LWC-router is a tool that allows you to handle routes in a web app, using dynamic routing. Dynamic routing takes place as the app is rendering on your machine, unlike the old routing architecture where the routing is handled in a configuration outside of a running app. LWC router implements a component-based approach to routing. It provides different routing components according to the needs of the application and platform.
 
 By preventing a page refresh, and using `c-router` or `c-link`, which is explained in more depth in API, the flash of a white screen or blank page is prevented. This is one increasingly common way of having a more seamless user experience. LWC router also allows the user to utilize browser functionality like the back button and the refresh page while maintaining the correct view of the application.
 

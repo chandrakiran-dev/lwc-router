@@ -83,7 +83,7 @@ It good to go. You have implemented the first application with LWC-router. Cheer
 
 ## Link and Reference
 
-Refer below links to getting started with Lightning Web Components and the know more from react.
+Refer below links to getting started with Lightning Web Components and the know more from react router.
 
 * [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/en/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components&trailmix_creator_id=tzarrjr&trailmix_slug=getting-ready-for-lb-2-b-new-to-lwc).
 * [React Router for reference](https://reactrouter.com/)

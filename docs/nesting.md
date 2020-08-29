@@ -2,7 +2,7 @@
 
 Since routes are regular LWC components, they may be rendered anywhere in the app, including in child elements.
 
-This helps when it's time to code-split your app into multiple bundles because code-splitting a LWC Router app is the same as code-splitting any other React app.
+This helps when it's time to code-split your app into multiple bundles because code-splitting a LWC Router app is the same as code-splitting any other LWC app.
 
 ```html
 <!--nesting.html-->
