@@ -1,0 +1,30 @@
+<template>
+    <c-router>
+        <div class="slds-tabs_default">
+            <ul class="slds-tabs_default__nav" >
+              <li class="slds-tabs_default__item">
+                <c-link label="Netflix" to='/account/netflix'></c-link>
+              </li>
+              <li class="slds-tabs_default__item">
+                <c-link label="Zillow Group" to='/account/zillow-group'></c-link>
+              </li>
+              <li class="slds-tabs_default__item">
+                <c-link label="Yahoo" to='/account/yahoo'></c-link>
+              </li>
+              <li class="slds-tabs_default__item">
+                <c-link label="Modus Create" to='/account/modus-create'></c-link>
+              </li> 
+            </ul>
+            <c-switch>
+                <c-route exact path="/">
+                    <c-redirect to='/account/default-netflix'></c-redirect>
+                </c-route>
+                <c-route exact path="/account/:name">
+                    <div class="slds-tabs_default__content ">
+                        <c-account></c-account>
+                    </div>
+                </c-route>
+            </c-switch>
+        </div>
+    </c-router>
+</template>
