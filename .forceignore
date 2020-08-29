@@ -1,3 +1,6 @@
 **/jsconfig.json
 
 **/.eslintrc.json
+examples/main/default/profiles/
+examples/main/default/applications/standard__LightningBolt.app-meta.xml
+examples/main/default/appMenus/AppSwitcher.appMenu-meta.xml
