@@ -85,20 +85,6 @@ LWC-Router provides a `<c-link>` component to create links in your application. 
 -->
 ```
 
-The `<c-nav-link>` is a special type of `<c-link>` that can style itself as “active” when it's matches to the current location.
-
-```html
-<c-nav-link to="/" active-class-name="active">Home</c-nav-link>
-
-<!-- This will render below html internally
-    <lightning-button 
-        variant={variant} 
-        label={label} 
-        title={title} 
-        class={getActiveClass}>
-    </lightning-button>
--->
-```
 
 Any time that you want to force navigation, you can render a `<c-redirect>`. When a `<c-redirect>` renders, it will navigate using its to prop.
 
@@ -109,13 +95,5 @@ Any time that you want to force navigation, you can render a `<c-redirect>`. Whe
 -->
 ```
 
-## Link and Reference
 
-Refer below links to getting started with Lightning Web Components and the know more from react.
 
-* [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/en/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components&trailmix_creator_id=tzarrjr&trailmix_slug=getting-ready-for-lb-2-b-new-to-lwc).
-* [React Router for reference](https://reactrouter.com/)
-
-## Keep Going!
-
-Hopefully, this gives you some confidence to use the primary components and make it more handy for you. Keep reading to learn more about the [why to use](whytouse.md) the LWC Router!

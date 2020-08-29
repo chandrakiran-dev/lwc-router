@@ -2,7 +2,7 @@ import { LightningElement, api, track } from 'lwc';
 import {dispatchEvent, getRouteMatch, REGISTER_ROUTER_EVENT_NAME} from 'c/lwcRouterUtil';
 export default class Link extends LightningElement {
     @api label;
-    @api to;
+    @api to = '*';
     @api variant = 'base';
     @api title;
     @track routerInstance;
