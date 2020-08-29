@@ -1,0 +1,38 @@
+<template>
+    <c-router>
+        <div class="slds-tabs_default">
+            <ul class="slds-tabs_default__nav">
+                <li class="slds-tabs_default__item">
+                    <c-link to="/" label="Home"></c-link>
+                </li>
+                <li class="slds-tabs_default__item">
+                    <c-link to="/old-match" label="Old Match, to be redirected"></c-link>
+                </li>
+                <li class="slds-tabs_default__item">
+                    <c-link to="/will-match" label="Will Match"></c-link>
+                </li>
+                <li class="slds-tabs_default__item">
+                    <c-link to="/will-not-match" label="Will Not Match"></c-link>
+                </li>
+                <li class="slds-tabs_default__item">
+                    <c-link to="/also/will/not/match" label="Also Will Not Match"></c-link>
+                </li>
+            </ul>
+
+            <c-switch>
+                <c-route exact path="/">
+                    <div class="slds-tabs_default__content ">Home</div>
+                </c-route>
+                <c-route path="/old-match">
+                    <c-redirect to="/will-match" ></c-redirect>
+                </c-route>
+                <c-route path="/will-match">
+                    <div class="slds-tabs_default__content ">Will Match</div>
+                </c-route>
+                <c-route path="*">
+                    <c-error-page></c-error-page>
+                </c-route>
+            </c-switch>
+        </div>
+    </c-router>
+</template>

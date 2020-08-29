@@ -1,5 +1,5 @@
 import { LightningElement, api, track } from 'lwc';
-import {dispatchEvent, matchPath, registerListener,getRouteMatch,REGISTER_GET_QUERY_EVENT_NAME, REGISTER_SWITCH_EVENT_NAME, REGISTER_GET_PARAM_EVENT_NAME, REGISTER_GET_ROUTE_MATCH_EVENT_NAME} from 'c/lwcRouterUtil';
+import {dispatchEvent, registerListener,getRouteMatch,REGISTER_GET_LOCATION_EVENT_NAME, REGISTER_GET_QUERY_EVENT_NAME, REGISTER_SWITCH_EVENT_NAME, REGISTER_GET_PARAM_EVENT_NAME, REGISTER_GET_ROUTE_MATCH_EVENT_NAME} from 'c/lwcRouterUtil';
 export default class Route extends LightningElement {
     @api path;
     @api exact = false;
@@ -20,6 +20,7 @@ export default class Route extends LightningElement {
         registerListener(REGISTER_GET_PARAM_EVENT_NAME, this, this.getParam.bind(this));
         registerListener(REGISTER_GET_QUERY_EVENT_NAME, this, this.getQuery.bind(this));
         registerListener(REGISTER_GET_ROUTE_MATCH_EVENT_NAME, this, this.getRouteMatch.bind(this));
+        registerListener(REGISTER_GET_LOCATION_EVENT_NAME, this, this.getLocation.bind(this));
         await dispatchEvent(REGISTER_SWITCH_EVENT_NAME, this, (switchInstance) => {
             this.switchInstance = switchInstance;
             this.unsubscribe = this.switchInstance.subscribe(this,this.handleChange.bind(this))
@@ -49,6 +50,12 @@ export default class Route extends LightningElement {
         callback({path : this.path, url : this.matcher.url});
         event.stopPropagation();
     }
+    getLocation(event){
+        let callback = event.detail;
+        callback({pathname : this.switchInstance.currentPath});
+        event.stopPropagation();
+    }
+
     disconnectedCallback(){
         if(this.unsubscribe){
             this.unsubscribe.unsubscribe();

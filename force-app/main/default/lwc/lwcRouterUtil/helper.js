@@ -1,4 +1,4 @@
-import {REGISTER_GET_PARAM_EVENT_NAME, REGISTER_GET_ROUTE_MATCH_EVENT_NAME, REGISTER_GET_QUERY_EVENT_NAME} from './constants';
+import {REGISTER_GET_PARAM_EVENT_NAME, REGISTER_GET_ROUTE_MATCH_EVENT_NAME, REGISTER_GET_QUERY_EVENT_NAME, REGISTER_GET_LOCATION_EVENT_NAME} from './constants';
 import URLMatcher from './urlMatcher';
 
 export const registerListener = (name, thisArg, callback) => {
@@ -31,6 +31,15 @@ export const getQuery = (thisArg, callback) => {
 }
 export const getRouteMatch = (thisArg, callback) => {
     const customEvt = new CustomEvent(REGISTER_GET_ROUTE_MATCH_EVENT_NAME, { bubbles: true, composed: true, detail : (data)=>{
+        callback(data);
+    }})
+    if(customEvt){
+        thisArg.dispatchEvent(customEvt);
+    }
+}
+
+export const getLocation = (thisArg, callback) => {
+    const customEvt = new CustomEvent(REGISTER_GET_LOCATION_EVENT_NAME, { bubbles: true, composed: true, detail : (data)=>{
         callback(data);
     }})
     if(customEvt){

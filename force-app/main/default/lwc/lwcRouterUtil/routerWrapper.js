@@ -12,8 +12,15 @@ export default class RouterWrapper {
     set currentPath(value){
         if(this._windowPath == window.location.pathname){
             if(this._currentPath != value){
-                this._currentPath = value
-                location.hash = value;
+                let path = value
+                if(path.startsWith('redirectTo:')){
+                    path = path.split(':')[1];
+                    this._currentPath = path
+                    history.replaceState('', '', '#' + path);
+                }else{
+                    this._currentPath = path
+                    location.hash = path;
+                }
                 this._subscribers.forEach(listener => {
                     listener._callback()
                 })

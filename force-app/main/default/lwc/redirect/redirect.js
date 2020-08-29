@@ -12,7 +12,7 @@ export default class Redirect extends LightningElement {
         await dispatchEvent(REGISTER_ROUTER_EVENT_NAME, this, async (routerInstance) => {
             this.routerInstance = routerInstance;
             if(this.to){
-                this.routerInstance.currentPath = this.to;
+                this.routerInstance.currentPath = 'redirectTo:' + this.to;
             }
         })
     }

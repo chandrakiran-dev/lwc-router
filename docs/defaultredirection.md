@@ -65,3 +65,7 @@ export default class Account extends LightningElement {
     Account name : {name}
 </template>
 ```
+
+## Github URL
+
+[Click here](https://github.com/chandrakiran-dev/lwc-router/tree/master/examples/lwc/redirectExample) to see the code on github.
