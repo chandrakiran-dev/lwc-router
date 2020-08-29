@@ -15,12 +15,12 @@ LWC-router providing solution for these type of issues and many more.
 
 To install the LWC-router, we only need to click on the below button. It will redirect you to another page where you need to login to salesforce, it will automatically install in your org. It's nothing but just unlock package url.
 
-<button type="button" class="btn btn-outline-primary"><i class="fab fa-salesforce"></i> Deploy to Developer Org</button>
-<button type="button" class="btn btn-outline-primary"><i class="fab fa-salesforce"></i> Deploy to Sandbox Org</button>
+<a type="button" href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2w000008L7OCAA0" target="_blank" class="btn btn-outline-primary"><i class="fab fa-salesforce"></i> Deploy to Developer Org</a>
+<a type="button" href="https://test.salesforce.com/packaging/installPackage.apexp?p0=04t2w000008L7OCAA0" target="_blank" class="btn btn-outline-primary"><i class="fab fa-salesforce"></i> Deploy to Sandbox Org</a>
 
 Or, run below command to install the package
 ```bash
-sfdx force:package:install --package 04t2v00000799S7AAI
+sfdx force:package:install --package 04t2w000008L7OCAA0
 ```
 
 ## Basic Routing - Example

@@ -12,13 +12,10 @@ See the [Quick start](quickstart.md) guide for more details.
 
 To install the LWC-router, we only need to click on the below button. It will redirect you to another page where you need to login to salesforce, it will automatically install in your org. It's nothing but just unlock package url.
 
-<button type="button" class="btn btn-outline-primary"><i class="fab fa-salesforce"></i> Deploy to Developer Org</button>
-<button type="button" class="btn btn-outline-primary"><i class="fab fa-salesforce"></i> Deploy to Sandbox Org</button>
-
-Or, run below command to install the package
 ```bash
 sfdx force:package:install --package 04t2v00000799S7AAI
 ```
+Or refer, [Click here](https://chandrakiran-dev.github.io/lwc-router/#/quickstart?id=installation) to see installation process.
 
 ## Features
 

@@ -1,15 +1,22 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": false
-    },
-    {
-      "path": "examples",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": false,
+            "package": "LWC-router",
+            "versionName": "Version 1.0",
+            "versionNumber": "1.0.0.NEXT"
+        },
+        {
+            "path": "examples",
+            "default": true
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "47.0",
+    "packageAliases": {
+        "LWC-router": "0Ho2w000000Kz1oCAC",
+        "LWC-router@1.0.0-1": "04t2w000008L7OCAA0"
     }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "47.0"
 }
