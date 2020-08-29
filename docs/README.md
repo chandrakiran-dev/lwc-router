@@ -17,7 +17,7 @@ To install the LWC-router, we only need to click on the below button. It will re
 
 Or, run below command to install the package
 ```bash
-sfdx force:package:install --package 04t2v00000799S7AAI
+sfdx force:package:install --package 04t2w000008L7OCAA0
 ```
 
 ## Features
