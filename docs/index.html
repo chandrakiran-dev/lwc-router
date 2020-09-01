@@ -82,6 +82,22 @@
       text-shadow: inherit !important;
       opacity: 1 !important;
     }
+    .raise-issue-button{
+      position: fixed;
+      bottom: 0;
+      right: 10px;
+      text-align: center;
+      opacity: .5;
+    }
+    .raise-issue-button a {
+      background: #3e53b7;
+      color: white;
+      border-radius: 5px 5px 0 0;
+      padding: 2px 5px;
+    }
+    .raise-issue-button:hover{
+      opacity: 1;
+    }
 
   </style>
 </head>
@@ -113,7 +129,9 @@
     </div>
   </nav>
   <div id="app"></div>
-
+  <div class="raise-issue-button">
+      <a type="button" href="https://github.com/chandrakiran-dev/lwc-router/issues" target="_blank" class="btn btn-outline-primary">Raise an Issue</a>
+  </div>
 
   <script>
     window.$docsify = {
@@ -156,7 +174,7 @@
             '          <div class="col-4" style="padding: 0;">',
             '              <ul class="section-items list-unstyled nav flex-column pb-3" style="padding-left: 0;">',
             '                  <li class="nav-item"><a class="nav-link scrollto" href="#/basic">Examples</a></li>',
-            '                  <li class="nav-item"><a class="nav-link scrollto" href="https://github.com/chandrakiran-dev/lwc-router/issues" target="_blank">Register an Issue</a></li>',
+            '                  <li class="nav-item"><a class="nav-link scrollto" href="https://github.com/chandrakiran-dev/lwc-router/issues" target="_blank">Raise an Issue</a></li>',
             '              </ul>',
             '          </div>',
             '          <div class="col-4" style="padding: 0;">',
