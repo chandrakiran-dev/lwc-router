@@ -1,10 +1,10 @@
 # Quick start
 
-LWC-router is the **client-side routing** for the LWC. It allows us to build a single page web application with navigation without the page refreshing as the user navigates. LWC-router uses component structure to call component, which display appropriate information. All the routing are placed on one place so it's very easy to understand the component navigation. 
+LWC-router is the **client-side routing** for the LWC. It allows us to create a single page application with navigation user without the page refreshing. LWC-router uses component structure to call component, which render the appropriate component. It is simple, easy to manage and understandable as all the routing are placed on one place.
 
-In the salesforce, many times there is a requirement to create single page application over their, we face following problem:
+In the salesforce, many times there is a need to create single page application over their, we face following problem:
 
-* Navigate from one component to other component.
+* Difficult to navigate from one component to other component.
 * Handle browser navigation like back button.
 * Handle browser refresh button.
 * It's very hard to understands form where the navigation happen. Especially, for the newbies.
@@ -45,13 +45,13 @@ In this example we have 3 “pages” handled by the router: a home page, an abo
             </ul>
             <c-switch>
                 <c-route exact path="/">
-                    <div class="slds-tabs_default__content ">Item One Content</div>
+                    <div class="slds-tabs_default__content ">Home page</div>
                 </c-route>
                 <c-route path="/item-two">
-                    <div class="slds-tabs_default__content ">Item Two Content</div>
+                    <div class="slds-tabs_default__content ">About page</div>
                 </c-route>
                 <c-route path="/item-three">
-                    <div class="slds-tabs_default__content ">Item Three Content</div>
+                    <div class="slds-tabs_default__content ">Users page</div>
                 </c-route>
             </c-switch>
         </div>

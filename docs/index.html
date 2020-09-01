@@ -98,6 +98,36 @@
     .raise-issue-button:hover{
       opacity: 1;
     }
+    .display-in-mobile{
+      display :none;
+    }
+    @media screen and (max-width: 768px){
+      .collapse.navbar-collapse.show{
+        display:none !important;
+      }
+      .collapse.navbar-collapse{
+        display:block !important;
+        background: #3e53b7;
+        text-align: left;
+      }
+      .collapsing.navbar-collapse{
+        display:none !important;
+      }
+      .collapsing.navbar-collapse.show{
+        display:none !important;
+      }
+      .collapse.navbar-collapse .nav-item{
+        display: block;
+        border-bottom: 1px solid white;
+      }
+      .display-in-mobile{
+        display :inline;
+        margin-left : 5px;
+      }
+      .app-nav{
+        height: initial;
+      }
+    }
 
   </style>
 </head>
@@ -108,7 +138,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse show" id="navbarSupportedContent">
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item">
           <a class="nav-link" href="#/quickstart">Quick Start</a>
@@ -123,7 +153,7 @@
           <a class="nav-link" href="#/hooks">API Reference</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/chandrakiran-dev/lwc-router" target="_blank"><i style="font-size:1.5rem" class="fab fa-github"></i></a>
+          <a class="nav-link" href="https://github.com/chandrakiran-dev/lwc-router" target="_blank"><i style="font-size:1.5rem" class="fab fa-github"></i><span class="display-in-mobile">Github</span></a>
         </li>
       </ul>
     </div>
