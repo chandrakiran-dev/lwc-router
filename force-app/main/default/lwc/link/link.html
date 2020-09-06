@@ -1,3 +1,5 @@
 <template>
-    <lightning-button variant={variant} label={label} title={title} onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <slot onclick={handleClick}>
+        <lightning-button variant={variant} label={label} title={title} class="slds-m-left_x-small"></lightning-button>
+    </slot>
 </template>
