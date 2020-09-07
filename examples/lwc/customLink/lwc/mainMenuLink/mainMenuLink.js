@@ -1,11 +1,11 @@
+import { Link } from 'c/lwcRouter';
 import { api } from 'lwc';
-import {Link} from 'c/lwcRouter';
 
 export default class MainMenuLink extends Link {
     @api path;
     @api label;
 
-    connectedCallback(){
+    connectedCallback() {
         //Call the connectedCallback method of the parent class.
         super.connectedCallback();
 
@@ -18,17 +18,17 @@ export default class MainMenuLink extends Link {
      * Otherwise, no need to write handler method.
      * You can directly use {handleClick} in the html file
      */
-    handleClick(){
-        super.handleClick();
+    handleClick(e) {
+        super.handleClick(e);
         //Some custom logic if you needed.
     }
 
-    get activeClass(){
+    get activeClass() {
         let strClass = 'slds-button';
 
-        // this.currentPath variable is the Link class property. 
-        // You can use this variable to match with your path. 
-        if(this.currentPath == this.path){
+        // this.currentPath variable is the Link class property.
+        // You can use this variable to match with your path.
+        if (this.currentPath == this.path) {
             strClass += ' active-class';
         }
         return strClass;
