@@ -6,7 +6,7 @@
 
 [LWC-router](https://chandrakiran-dev.github.io/lwc-router/) is the client-side routing for the LWC. It allows us to build a single page web application with navigation without the page refreshing as the user navigates. LWC-router uses component structure to call component, which display appropriate information. All the routing are placed on one place so it's very easy to understand the component navigation.
 
-See the [Quick start](quickstart.md) guide for more details.
+See the [Quick start](https://chandrakiran-dev.github.io/lwc-router/#/quickstart) guide for more details.
 
 ## Installation
 
