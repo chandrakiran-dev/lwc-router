@@ -10,14 +10,26 @@ export default class Link extends LightningElement {
     @track currentPath;
     @track unsubscribe;
     parentUrl
+    _slottedElement;
+    _activeClass = ['link-active-class'];
+
     @api
     get active() {
         return this._active;
     }
     set active(value) {
         this._active = value;
-        this.toggleActiveAttribute();
+        this.toggleActiveAttributes(this._active);
     }
+
+    @api
+    get activeClass() {
+        return this._activeClass;
+    }
+    set activeClass(value) {
+        this._activeClass = String(value).split(' ');
+    }
+
     async connectedCallback() {
         await getRouteMatch(this, ({ path, url }) => {
             this.parentUrl = url;
@@ -35,12 +47,22 @@ export default class Link extends LightningElement {
     setCurrentPath() {
         this.currentPath = this.routerInstance.currentPath;
     }
-    toggleActiveAttribute() {
+    toggleActiveAttributes() {
         if (this.active) {
             this.setAttribute("active", "");
+            this.applyActiveClassTo(this._slottedElement);
         } else {
             this.removeAttribute("active");
+            this.removeActiveClassFrom(this._slottedElement);
         }
+    }
+    applyActiveClassTo(element) {
+        if (!element) return;
+        this.activeClass.forEach(activeClass => element.classList.add(activeClass));
+    }
+    removeActiveClassFrom(element) {
+        if (!element) return;
+        this.activeClass.forEach(activeClass => element.classList.remove(activeClass));
     }
     handleClick(e) {
         e.stopPropagation();
@@ -48,6 +70,9 @@ export default class Link extends LightningElement {
             this.routerInstance.currentPath = this.to;
             this.currentPath = this.to;
         }
+    }
+    renderedCallback() {
+        this._slottedElement = this.querySelector('*');
     }
     disconnectedCallback() {
         if (this.unsubscribe) {
