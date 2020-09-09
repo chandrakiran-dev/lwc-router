@@ -15,16 +15,16 @@ export default class Link extends LightningElement {
 
     @api
     get active() {
-        return this._active;
+        return !!this._active;
     }
     set active(value) {
-        this._active = value;
+        this._active = !!value;
         this.toggleActiveAttributes(this._active);
     }
 
     @api
     get activeClass() {
-        return this._activeClass;
+        return this._activeClass || [];
     }
     set activeClass(value) {
         this._activeClass = String(value).split(' ').filter(value => !!value);
