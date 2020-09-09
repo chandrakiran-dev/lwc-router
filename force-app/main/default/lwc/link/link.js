@@ -1,5 +1,6 @@
 import { LightningElement, api, track } from 'lwc';
 import { REGISTER_ROUTER_EVENT_NAME, dispatchEvent, getRouteMatch } from 'c/lwcRouterUtil';
+
 export default class Link extends LightningElement {
     @api label;
     @api to = '*';
@@ -43,8 +44,30 @@ export default class Link extends LightningElement {
             this.active = this.currentPath === this.to;
         })
     }
+    renderedCallback() {
+        this.captureSlottedElement();
+    }
+    disconnectedCallback() {
+        if (this.unsubscribe) {
+            this.unsubscribe.unsubscribe();
+        }
+    }
+    handleClick(e) {
+        e.stopPropagation();
+        if (this.to) {
+            this.routerInstance.currentPath = this.to;
+            this.currentPath = this.to;
+        }
+    }
+    handleSlotChange() {
+        this.captureSlottedElement();
+        this.toggleActiveAttributes();
+    }
     setCurrentPath() {
         this.currentPath = this.routerInstance.currentPath;
+    }
+    captureSlottedElement() {
+        this._slottedElement = this.querySelector('*');
     }
     toggleActiveAttributes() {
         if (this.active) {
@@ -62,20 +85,5 @@ export default class Link extends LightningElement {
     removeActiveClassFrom(element) {
         if (!element) return;
         this.activeClass.forEach(activeClass => element.classList.remove(activeClass));
-    }
-    handleClick(e) {
-        e.stopPropagation();
-        if (this.to) {
-            this.routerInstance.currentPath = this.to;
-            this.currentPath = this.to;
-        }
-    }
-    renderedCallback() {
-        this._slottedElement = this.querySelector('*');
-    }
-    disconnectedCallback() {
-        if (this.unsubscribe) {
-            this.unsubscribe.unsubscribe();
-        }
     }
 }
