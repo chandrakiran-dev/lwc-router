@@ -27,7 +27,7 @@ export default class Link extends LightningElement {
         return this._activeClass;
     }
     set activeClass(value) {
-        this._activeClass = String(value).split(' ');
+        this._activeClass = String(value).split(' ').filter(value => !!value);
     }
 
     async connectedCallback() {
