@@ -1,9 +1,9 @@
-import { LightningElement, api, track } from 'lwc';
-import { REGISTER_ROUTER_EVENT_NAME, dispatchEvent, getRouteMatch } from 'c/lwcRouterUtil';
+import {LightningElement, api, track} from 'lwc';
+import {REGISTER_ROUTER_EVENT_NAME, dispatchEvent, getRouteMatch} from 'c/lwcRouterUtil';
 
 export default class Link extends LightningElement {
     @api label;
-    @api to = '*';
+    @api to      = '*';
     @api variant = 'base';
     @api title;
     @track routerInstance;
@@ -31,7 +31,7 @@ export default class Link extends LightningElement {
     }
 
     async connectedCallback() {
-        await getRouteMatch(this, ({ path, url }) => {
+        await getRouteMatch(this, ({path, url}) => {
             this.parentUrl = url;
             if (this.to.indexOf(':url') > -1) {
                 this.to = this.to.replace(':url', this.parentUrl);
@@ -39,9 +39,9 @@ export default class Link extends LightningElement {
         })
         await dispatchEvent(REGISTER_ROUTER_EVENT_NAME, this, async (routerInstance) => {
             this.routerInstance = routerInstance;
-            this.currentPath = this.routerInstance.currentPath;
-            this.unsubscribe = this.routerInstance.subscribe(this, this.setCurrentPath.bind(this))
-            this.active = this.currentPath === this.to;
+            this.currentPath    = this.routerInstance.currentPath;
+            this.unsubscribe    = this.routerInstance.subscribe(this, this.setCurrentPath.bind(this))
+            this.active         = this.currentPath === this.to;
         })
     }
     renderedCallback() {
@@ -56,7 +56,7 @@ export default class Link extends LightningElement {
         e.stopPropagation();
         if (this.to) {
             this.routerInstance.currentPath = this.to;
-            this.currentPath = this.to;
+            this.currentPath                = this.to;
         }
     }
     handleSlotChange() {
@@ -65,6 +65,7 @@ export default class Link extends LightningElement {
     }
     setCurrentPath() {
         this.currentPath = this.routerInstance.currentPath;
+        this.active = this.currentPath === this.to;
     }
     captureSlottedElement() {
         this._slottedElement = this.querySelector('*');
