@@ -6,6 +6,7 @@ export default class Link extends LightningElement {
     @api to = '*';
     @api variant = 'base';
     @api title;
+    @api pageTitle;
     @track routerInstance;
     @track currentPath;
     @track unsubscribe;
@@ -20,6 +21,9 @@ export default class Link extends LightningElement {
     set active(value) {
         this._active = !!value;
         this.toggleActiveAttributes(this._active);
+        if(this._active && this.pageTitle){
+            window.document.title = this.pageTitle;
+        }
     }
 
     @api
