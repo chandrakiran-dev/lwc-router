@@ -1,5 +1,6 @@
 import { LightningElement, api, track } from 'lwc';
 import { REGISTER_ROUTER_EVENT_NAME, dispatchEvent, getRouteMatch } from 'c/lwcRouterUtil';
+
 export default class Link extends LightningElement {
     @api label;
     @api to = '*';
@@ -9,6 +10,26 @@ export default class Link extends LightningElement {
     @track currentPath;
     @track unsubscribe;
     parentUrl
+    _slottedElement;
+    _activeClass = ['link-active-class'];
+
+    @api
+    get active() {
+        return !!this._active;
+    }
+    set active(value) {
+        this._active = !!value;
+        this.toggleActiveAttributes(this._active);
+    }
+
+    @api
+    get activeClass() {
+        return this._activeClass || [];
+    }
+    set activeClass(value) {
+        this._activeClass = String(value).split(' ').filter(value => !!value);
+    }
+
     async connectedCallback() {
         await getRouteMatch(this, ({ path, url }) => {
             this.parentUrl = url;
@@ -20,10 +41,16 @@ export default class Link extends LightningElement {
             this.routerInstance = routerInstance;
             this.currentPath = this.routerInstance.currentPath;
             this.unsubscribe = this.routerInstance.subscribe(this, this.setCurrentPath.bind(this))
+            this.active = this.currentPath === this.to;
         })
     }
-    setCurrentPath() {
-        this.currentPath = this.routerInstance.currentPath;
+    renderedCallback() {
+        this.captureSlottedElement();
+    }
+    disconnectedCallback() {
+        if (this.unsubscribe) {
+            this.unsubscribe.unsubscribe();
+        }
     }
     handleClick(e) {
         e.stopPropagation();
@@ -32,9 +59,32 @@ export default class Link extends LightningElement {
             this.currentPath = this.to;
         }
     }
-    disconnectedCallback() {
-        if (this.unsubscribe) {
-            this.unsubscribe.unsubscribe();
+    handleSlotChange() {
+        this.captureSlottedElement();
+        this.toggleActiveAttributes();
+    }
+    setCurrentPath() {
+        this.currentPath = this.routerInstance.currentPath;
+        this.active = this.currentPath === this.to;
+    }
+    captureSlottedElement() {
+        this._slottedElement = this.querySelector('*');
+    }
+    toggleActiveAttributes() {
+        if (this.active) {
+            this.setAttribute("active", "");
+            this.applyActiveClassTo(this._slottedElement);
+        } else {
+            this.removeAttribute("active");
+            this.removeActiveClassFrom(this._slottedElement);
         }
+    }
+    applyActiveClassTo(element) {
+        if (!element) return;
+        this.activeClass.forEach(activeClass => element.classList.add(activeClass));
+    }
+    removeActiveClassFrom(element) {
+        if (!element) return;
+        this.activeClass.forEach(activeClass => element.classList.remove(activeClass));
     }
 }
