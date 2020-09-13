@@ -1,5 +1,5 @@
 <template>
-    <slot onclick={handleClick}>
+    <slot onclick={handleClick} onslotchange={handleSlotChange}>
         <lightning-button variant={variant} label={label} title={title} class="slds-m-left_x-small"></lightning-button>
     </slot>
 </template>

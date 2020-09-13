@@ -1,4 +1,4 @@
-## LWC Router
+# LWC Router
 
 > Routing for the Lightning Web Component
 
@@ -26,4 +26,14 @@ Or refer, [Click here](https://chandrakiran-dev.github.io/lwc-router/#/quickstar
 - Handle browser refresh button.
 - All the routing are placed on one place so it's very easy to understand the component navigation.
 - Compatible for the Community and salesforce 1 application
+
+## Contribution Note
+
+When contributing to this repository, Please follow below process:
+- Create a new branch from the 'Next_Release' with the feature name and 
+- After completing the feature, create the pull request for the 'Next_Release'.
+
+We will merge 'Next_Release' to 'master' branch when we going to release next features and will create the release note for this.
+
+
 
