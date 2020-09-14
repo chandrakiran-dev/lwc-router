@@ -14,3 +14,26 @@
 examples/main/default/profiles/
 examples/main/default/applications/standard__LightningBolt.app-meta.xml
 examples/main/default/appMenus/AppSwitcher.appMenu-meta.xml
+
+# IntelliJ / Illuminated Cloud config
+.idea
+IlluminatedCloud
+
+# Dependency directories
+node_modules/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,16 @@
+{
+  "name": "lwc-router",
+  "version": "1.0.0",
+  "description": "LWC-router is the client-side routing for LWC",
+  "repository": "git@github.com:chandrakiran-dev/lwc-router.git",
+  "author": "Chandra Kiran",
+  "dependencies": {},
+  "devDependencies": {
+    "@salesforce/sfdx-lwc-jest": "^0.9.2"
+  },
+  "scripts": {
+    "test:unit": "sfdx-lwc-jest",
+    "test:unit:watch": "sfdx-lwc-jest --watch",
+    "test:unit:debug": "sfdx-lwc-jest --debug"
+  }
+}
